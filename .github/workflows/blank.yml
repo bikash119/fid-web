@@ -28,4 +28,4 @@ jobs:
       id : verify-hugo-installation
       run : |
         INSTALLED_HUGO_VERSION : $(./hugo version )
-        echo "::set-output name=HUGO_VERSION:: ${INSTALLED_HUGO_VERSION}"
+        echo "::set-output name=INSTALLED_HUGO_VERSION :: ${INSTALLED_HUGO_VERSION}"
