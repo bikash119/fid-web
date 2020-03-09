@@ -27,5 +27,5 @@ jobs:
     - name : Verify Hugo Installation
       id : verify-hugo-installation
       run : |
-        INSTALLED_HUGO_VERSION : $(./hugo version )
+        INSTALLED_HUGO_VERSION : $(pwd )
         echo "::set-output name=INSTALLED_HUGO_VERSION :: ${INSTALLED_HUGO_VERSION}"
