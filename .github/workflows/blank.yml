@@ -25,5 +25,5 @@ jobs:
       with:
        hugo-version: ${{env.HUGO_VERSION}}
     - name: Build
-      run: hugo --minify --source ./src --destination ${{ env.OUTPUT_PATH }}
+      run: hugo --minify --destination ${{ env.OUTPUT_PATH }}
        
