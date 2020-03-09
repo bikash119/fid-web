@@ -24,3 +24,8 @@ jobs:
       uses: peaceiris/actions-hugo@v2.4.6
         with:
            hugo-version: ${{HUGO_VERSION}}
+    - name : Verify Hugo Installation
+      id : verify-hugo-installation
+      run : |
+        HUGO_VERSION : $(./hugo version )
+        echo "::set-output name=HUGO_VERSION:: ${HUGO_VERSION}"
