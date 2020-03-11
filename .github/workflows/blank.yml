@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: mkdir ${{ ARTIFACT_DIRECTORY }}/website
+    - run: mkdir -p ${{ env.ARTIFACT_DIRECTORY }}/website
     - name: Get Hugo
       id : getHUGO
       uses: peaceiris/actions-hugo@v2.4.6
@@ -34,5 +34,5 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: websiteArtifact
-        path: ${{ ARTIFACT_DIRECTORY }}/website
+        path: ${{ env.ARTIFACT_DIRECTORY }}/website
        
