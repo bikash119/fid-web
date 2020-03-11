@@ -2,8 +2,8 @@ baseURL = "www.example.com"
 languageCode = "en-us"
 title = "Hugo Whisper Theme"
 themesDir = "themes"
-#theme = "hugo-whisper-theme"
-theme = "hugo-now-ui"
+theme = "hugo-whisper-theme"
+#theme = "hugo-now-ui"
 
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
