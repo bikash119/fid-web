@@ -3,6 +3,7 @@
 name: build and deploy website
 env:
   OUTPUT_PATH: ${{ github.workspace }}/.output
+  ARTIFACT_DIRECTORY: ${{ github.workspace }}/.artifacts 
   HUGO_VERSION : 0.65.3
 
 # Controls when the action will run. Triggers the workflow on push or pull request
@@ -19,11 +20,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - run: mkdir ${{ ARTIFIACT_DIRECTORY }}/website
     - name: Get Hugo
-      id : get-hugo
+      id : getHUGO
       uses: peaceiris/actions-hugo@v2.4.6
       with:
        hugo-version: ${{env.HUGO_VERSION}}
     - name: Build
+      id : buildWebsite
       run: hugo --minify --destination ${{ env.OUTPUT_PATH }}
+    - name: Upload Artifact
+      id : uploadArtifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: websiteArtifact
+        path: ${{ ARTIFACT_DIRECTORY }}/website
        
