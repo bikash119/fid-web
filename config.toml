@@ -2,8 +2,8 @@ baseURL = "www.example.com"
 languageCode = "en-us"
 title = "Hugo Whisper Theme"
 themesDir = "themes"
-#theme = "hugo-whisper-theme"
-theme = "hugo-now-ui"
+theme = "hugo-whisper-theme"
+#theme = "hugo-now-ui"
 
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
@@ -22,6 +22,10 @@ summaryLength = 30
     name = "Docs"
     url = "/docs/"
     weight = 2
+[[menu.main]]
+    name = "Docs"
+    url = "/pricing/"
+    weight = 3
 
 [params]
   google_analytics_id=""
