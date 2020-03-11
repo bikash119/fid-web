@@ -2,7 +2,7 @@
 
 name: build and deploy website
 env:
-  OUTPUT_PATH: ${{ github.workspaces }}/.output
+  OUTPUT_PATH: ${{ github.workspace }}/.output
   HUGO_VERSION : 0.65.3
 
 # Controls when the action will run. Triggers the workflow on push or pull request
