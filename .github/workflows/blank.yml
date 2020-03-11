@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: mkdir ${{ ARTIFIACT_DIRECTORY }}/website
+    - run: mkdir ${{ ARTIFACT_DIRECTORY }}/website
     - name: Get Hugo
       id : getHUGO
       uses: peaceiris/actions-hugo@v2.4.6
