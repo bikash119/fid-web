@@ -1,9 +1,9 @@
-baseURL = "www.example.com"
+baseURL = "/"
 languageCode = "en-us"
 title = "Hugo Whisper Theme"
 themesDir = "themes"
-#theme = "hugo-whisper-theme"
-theme = "hugo-now-ui"
+theme = "hugo-whisper-theme"
+#theme = "hugo-now-ui"
 
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
@@ -23,7 +23,7 @@ summaryLength = 30
     url = "/docs/"
     weight = 2
 [[menu.main]]
-    name = "Docs"
+    name = "pricing"
     url = "/pricing/"
     weight = 3
 
