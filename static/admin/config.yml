@@ -3,7 +3,6 @@ backend:
   branch: master
   publish_mode: editorial_workflow
   media_folder: "site/static/img" # Folder where user uploaded files should go
-  media_folder: "img"
   collections: # A list of collections the CMS should be able to edit
     - name : "pages"
       label : "Pages"
