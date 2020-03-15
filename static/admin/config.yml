@@ -5,25 +5,25 @@ backend:
 media_folder: "static/img" # Folder where user uploaded files should go
 media_library: "img"
 collections: # A list of collections the CMS should be able to edit
-    - name : "pages"
-      label : "Pages"
-      files:
-        - file: "content/_index.md"
-          label: "Home Page"
-          name : "home"
-          fields:
-            - {label: Title, name: title, widget: string}
-            - {label: Subtitle, name: subtitle, widget: string}
-            - {label: Image, name: image, widget: image}
-            - {label: "Blurb", name: blurb, widget: object, fields: [
-                  {label: "Heading", name: "heading", widget: string},
-                  {label: "Text", name: "text", widget: "text"}]}
-            - {label: "Intro", name: intro, widget: object, fields: [
-                  {label: "Heading", name: "heading", widget: string},
-                  {label: "Text", name: "text", widget: "text"}]}
-            - {label: "Products", name: products, widget: list, fields: [
-                  {label: "Image", name: "image", widget: "image"},
-                  {label: "Text", name: "text", widget: "text"}]}
-            - {label: "Values", name: "values", widget: "object", fields: [
-                  {label: "Heading", name: "heading", widget: string},
-                  {label: "Text", name: "text", widget: "text"}]}
+  - name : "pages"
+    label : "Pages"
+    files:
+      - file: "content/_index.md"
+        label: "Home Page"
+        name : "home"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: "Blurb", name: blurb, widget: object, fields: [
+                {label: "Heading", name: "heading", widget: string},
+                {label: "Text", name: "text", widget: "text"}]}
+          - {label: "Intro", name: intro, widget: object, fields: [
+                {label: "Heading", name: "heading", widget: string},
+                {label: "Text", name: "text", widget: "text"}]}
+          - {label: "Products", name: products, widget: list, fields: [
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Text", name: "text", widget: "text"}]}
+          - {label: "Values", name: "values", widget: "object", fields: [
+                {label: "Heading", name: "heading", widget: string},
+                {label: "Text", name: "text", widget: "text"}]}
