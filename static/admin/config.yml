@@ -4,6 +4,7 @@ backend:
   #publish_mode: editorial_workflow
 media_folder: "static/img" # Folder where user uploaded files should go
 media_library: "img"
+folder: "_posts/blog"
 collections: # A list of collections the CMS should be able to edit
   - name : "pages"
     label : "Pages"
