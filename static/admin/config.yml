@@ -3,7 +3,7 @@ backend:
   branch: staging
   #publish_mode: editorial_workflow
 media_folder: "static/img" # Folder where user uploaded files should go
-media_library: "img"
+#media_library: "img"
 collections:
   - name: "blog"
     label: "Blog"
