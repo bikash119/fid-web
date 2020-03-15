@@ -4,27 +4,16 @@ backend:
   #publish_mode: editorial_workflow
 media_folder: "static/img" # Folder where user uploaded files should go
 media_library: "img"
-folder: "_posts/blog"
-collections: # A list of collections the CMS should be able to edit
-  - name : "pages"
-    label : "Pages"
-    files:
-      - file: "content/_index.md"
-        label: "Home Page"
-        name : "home"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: "Blurb", name: blurb, widget: object, fields: [
-                {label: "Heading", name: "heading", widget: string},
-                {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Intro", name: intro, widget: object, fields: [
-                {label: "Heading", name: "heading", widget: string},
-                {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Products", name: products, widget: list, fields: [
-                {label: "Image", name: "image", widget: "image"},
-                {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Values", name: "values", widget: "object", fields: [
-                {label: "Heading", name: "heading", widget: string},
-                {label: "Text", name: "text", widget: "text"}]}
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/pages"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
